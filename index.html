@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .search{
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            position: relative;
+            /* background-color: blue; */
+            /* margin: 30%; */
+            position: relative;
+        }
+         .search-box{
+            height: 40px;
+            width: 40px;
+            border: 2px solid red;
+            padding: 15px;
+            border-radius: 25px;
+            background-color: black;
+            color: white;
+            outline: none;
+            border: none;
+            transition: width 0.25s ease;
+            position: absolute;
+          
+            
+        } 
+          .search-btn, .close-btn{
+             height: 40px;
+             width: 40px;
+            
+            font-size: 25px;
+            background-color: #121212;
+             color: white; 
+             border: none;
+            cursor: pointer;
+            position: absolute;
+            
+            transition:all 0.25s ease ;
+            border-radius: 20px;
+            
+             
+        }
+        .close-btn{
+            color: rgb(225,83,26);
+            z-index: -1;
+            
+
+            
+            
+        }
+        .active .search-box{
+            width: 250px;
+            
+        }
+        .active .search-btn{
+            transform: translate(210px,-1px) scale(0.8);
+            background-color: transparent; 
+            /* transform: rotate(180deg); */
+        }
+        .active .close-btn{
+           z-index: 0;
+           /* transform: translate(-210px,-1px); */
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    <div class="search ">
+        <input type="text" class="search-box" id="" placeholder="search....">
+        <button class="search-btn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <button class="close-btn">
+            <i class="fa-solid fa-circle-xmark"></i>
+        </button>
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
